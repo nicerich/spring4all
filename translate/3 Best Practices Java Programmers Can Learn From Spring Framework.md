@@ -67,7 +67,8 @@ public class Hello {
 
 
 ## 2.支持在检查异常之上定义未经检查的异常
-## 2. Favor Unchecked Exceptions Over Checked Exceptions ? 支持在检查异常之上定义未经检查的异常
+## 2. Favor Unchecked Exceptions Over Checked Exceptions ? 
+
 
 如果您使用过Spring Framework，那么您已经注意到Spring支持未检查的异常而不是已检查的异常，最好的例子就是Spring JDBC。
 
