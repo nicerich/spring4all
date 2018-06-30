@@ -4,7 +4,7 @@
 >
 > 译者： [nicerich](https://github.com/nicerich)
 >
-> 校对： [汪志峰](https://github.com/maskwang520)
+> 校对： 
 
 
 看一看Spring的源代码，你便可以看到设计spring框架的构思。我们从Spring中寻找到一些最佳实践可供Java开发人员学习。
