@@ -90,7 +90,7 @@ Spring大量使用模板方法设计模式来简化事情。一个很好的例�
 
 这是一个很好的图表，很好地解释了模板模式。你可以看到每个人都有一些共同的任务，但是他们做了不同的工作，并且很好地被Template方法捕获。他们所需要做的就是定义他们的工作，他们可以通过定义work（）抽象方法
 
-          ![image](https://github.com/nicerich/spring4all/blob/master/translate/images/Template%20method%20pattern%20in%20Java%20example.png?raw=true)
+![image](https://github.com/nicerich/spring4all/blob/master/translate/images/Template%20method%20pattern%20in%20Java%20example.png?raw=true)
 
 除了JdbcTemplate之外，您还可以在整个Spring框架的API中找到很多其他的Template Method Pattern示例，例如JmsTemplate和RestTemplate，它们允许您从Java应用程序中使用REST API。
 
