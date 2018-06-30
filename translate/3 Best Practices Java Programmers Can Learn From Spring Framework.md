@@ -6,7 +6,7 @@
 >
 > 校对： 
 
-
+![image](https://github.com/nicerich/spring4all/blob/master/translate/images/Template%20method%20pattern%20in%20Java%20example.png?raw=true)
 看一看Spring的源代码，你便可以看到设计spring框架的构思。我们从Spring中寻找到一些最佳实践可供Java开发人员学习。
 
 ## 广告略
