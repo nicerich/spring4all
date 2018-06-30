@@ -9,28 +9,62 @@
 
 看一看Spring的源代码，你便可以看到设计spring框架的构思。我们从Spring中寻找到一些最佳实践可供Java开发人员学习。
 
-## 你会得到什么？
+## 广告略
 
-你会创建一个Spring应用，它能够使用Spring Data REST创建并且删除一个存储在数据库中的`Person`对象。Spring Data REST具有[Spring HATEOAS](https://projects.spring.io/spring-hateoas)和[Spring Data JPA](https://projects.spring.io/spring-data-jpa)的功能，并将它们自动组合在一起。
+毫无疑问，Spring Framework是最流行的Java框架之一，通过提供诸如依赖注入  和  控制反转等特性，创建真实世界的企业级Java应用程序变得非常简单  。
+
+但说实话，Spring不仅仅是另一个DI和IOC框架。通过提供一个有用的抽象层，它可以进一步简化许多Java的API，例如JDBC，JMS，Java Mail等。使用Spring的JdbcTempalte和其他实用程序类使用JDBC更容易。它们消除了Java开发人员在执行SQL语句和处理ResultSets以获取他们想要的Java对象方面所面临的大部分障碍。
+
+所以，当你学习Spring的时候，你不仅学会了如何使用它，还学习了一些关于如何用Java编写更好的代码和一般的面向对象编程的有用见解。
+
+在本文中，我将分享我在学习Spring时遇到的一些最佳实践，主要是阅读Craig Walls 的经典Spring in Action书以及我对Spring的经验。
+
+这本书对我有特别巨大的影响，因为克雷格的优秀写作风格和他在春季解释每一个概念的方式。如果你还没有阅读，我强烈建议 - 这是完全值得你的时间和金钱。
+
+无论如何，在不浪费任何时间的情况下，我已经学习了三个最佳实践，并建议每个Java程序员都要注意并在Java中编写代码时应用它。
 
 > Spring Data REST 也支持 [Spring Data Neo4j](https://spring.io/guides/gs/accessing-neo4j-data-rest), [Spring Data Gemfire](https://spring.io/guides/gs/accessing-gemfire-data-rest) 和 [Spring Data MongoDB](https://spring.io/guides/gs/accessing-mongodb-data-rest) 作为后端存储, 但这些并不是本指南的一部分。
 
 
-## 你需要准备什么？
+## 面向接口编程
 
-大约15分钟时间
+这是我在阅读Head First Design Patterns时首先学习的一个旧的OOP指南。这种OOP设计原则的主要目的是减少两类之间的耦合，从而提高灵活性。
 
-一个喜欢的文本编辑器或者IDE
+Spring严格遵循这一面向对象的准则，并经常公开接口以使用关键类，例如，创建JdbcOperation接口以利用JdbcTemplate。这种做法促进了不同层之间的松散耦合。
 
-[JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 或 更高版本
+另一个很好的例子是一个Cache接口，它被用来提供缓存。所有其他缓存实现（例如EhCache，ConcurrentMapCache和NoOpCache）都实现此接口。
 
-[Gradle 2.3+](http://www.gradle.org/downloads) 或 [Maven 3.0+](https://maven.apache.org/download.cgi)
+如果您的代码依赖于缓存接口而不是任何特定的实现，则可以切换缓存提供程序而不影响代码的其他部分。
 
-你也可以直接导入代码到IDE:
+下面是使用Collection框架编写Java接口的简单代码示例。如果仔细观察，在本例中，我使用了一个接口而不是实现来声明Java中的变量，参数和返回类型的方法。
 
-[Spring Tool Suite (STS)](https://spring.io/guides/gs/sts)
+导入 java。util。数组 ;
+导入 java。util。列表 ;
+导入 java。util。流。收藏家 ;
+/ **
+ *程序演示Java中的接口编码
+ * @作者WINDOWS 8
+ *
+ * /
+公开 课 你好 {
+  public  static  void  main（String  args []）{
+    //使用接口作为变量类型
+    列表< String >  rawMessage  =  数组。asList（“one”，“two”，“three”）;
+    List < String >  allcaps  =  toCapitalCase（rawMessage）;
+    系统。出去。println（allcaps）;
+  }
+  / **
+   *使用接口作为参数类型和返回类型
+   * /
+  public  static  List < String >  toCapitalCase（List < String >  messages）{
+    返回 消息。stream（）
+                    。map（String :: toUpperCase）
+                    。收集（收藏家。toList（））;
+  }
+}
 
-[IntelliJ IDEA](https://spring.io/guides/gs/intellij-idea/)
+
+这种编码风格是灵活的，并且在未来更容易改变。
 
 
 ## 怎样完成指南？
