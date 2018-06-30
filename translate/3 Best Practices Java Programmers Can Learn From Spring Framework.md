@@ -6,8 +6,8 @@
 >
 > 校对： [汪志峰](https://github.com/maskwang520)
 
-本指南将指导你创建一个基于[hypermedia](https://spring.io/guides/gs/rest-hateoas)的[RESTful](https://spring.io/understanding/REST)前端通过JPA访问关系型数据库的应用程序。
-Take one look at Spring's source code, and you can see the thought that went into the framework. Check out some best practices Java devs can learn from Spring.
+
+看一看Spring的源代码，你便可以看到设计spring框架的构思。我们从Spring中寻找到一些最佳实践可供Java开发人员学习。
 
 ## 你会得到什么？
 
