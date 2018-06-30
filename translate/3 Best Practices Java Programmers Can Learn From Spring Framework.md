@@ -23,8 +23,6 @@
 
 无论如何，在不浪费任何时间的情况下，我已经学习了三个最佳实践，并建议每个Java程序员都要注意并在Java中编写代码时应用它。
 
-> Spring Data REST 也支持 [Spring Data Neo4j](https://spring.io/guides/gs/accessing-neo4j-data-rest), [Spring Data Gemfire](https://spring.io/guides/gs/accessing-gemfire-data-rest) 和 [Spring Data MongoDB](https://spring.io/guides/gs/accessing-mongodb-data-rest) 作为后端存储, 但这些并不是本指南的一部分。 山东
-
 
 
 ## 1.面向接口编程
@@ -69,6 +67,7 @@ public class Hello {
 
 
 ## 2.支持在检查异常之上定义未经检查的异常
+## 2. Favor Unchecked Exceptions Over Checked Exceptions ? 支持在检查异常之上定义未经检查的异常
 
 如果您使用过Spring Framework，那么您已经注意到Spring支持未检查的异常而不是已检查的异常，最好的例子就是Spring JDBC。
 
