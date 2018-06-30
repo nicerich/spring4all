@@ -1,12 +1,13 @@
-# 使用REST访问JPA数据
+# Java程序员可以从Spring框架中学习的3个最佳实践
 
-> 原文：[accessing-jpa-data-with-rest](https://spring.io/guides/gs/accessing-data-rest/)
+> 原文：[3 Best Practices Java Programmers Can Learn From Spring Framework](https://dzone.com/articles/3-best-practices-java-programmers-can-learn-from-s)
 >
-> 译者： [strongant](https://github.com/strongant)
+> 译者： [nicerich](https://github.com/nicerich)
 >
 > 校对： [汪志峰](https://github.com/maskwang520)
 
 本指南将指导你创建一个基于[hypermedia](https://spring.io/guides/gs/rest-hateoas)的[RESTful](https://spring.io/understanding/REST)前端通过JPA访问关系型数据库的应用程序。
+Take one look at Spring's source code, and you can see the thought that went into the framework. Check out some best practices Java devs can learn from Spring.
 
 ## 你会得到什么？
 
