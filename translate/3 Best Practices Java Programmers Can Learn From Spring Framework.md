@@ -25,6 +25,8 @@
 
 > Spring Data REST 也支持 [Spring Data Neo4j](https://spring.io/guides/gs/accessing-neo4j-data-rest), [Spring Data Gemfire](https://spring.io/guides/gs/accessing-gemfire-data-rest) 和 [Spring Data MongoDB](https://spring.io/guides/gs/accessing-mongodb-data-rest) 作为后端存储, 但这些并不是本指南的一部分。
 
+> 运行时异常（即未经检查的异常）会自动强制执行整个逻辑工作单元的回滚。
+
 
 ## 面向接口编程
 
