@@ -25,10 +25,9 @@
 
 > Spring Data REST 也支持 [Spring Data Neo4j](https://spring.io/guides/gs/accessing-neo4j-data-rest), [Spring Data Gemfire](https://spring.io/guides/gs/accessing-gemfire-data-rest) 和 [Spring Data MongoDB](https://spring.io/guides/gs/accessing-mongodb-data-rest) 作为后端存储, 但这些并不是本指南的一部分。
 
-> nicerich tips：运行时异常（即未经检查的异常）发生时会自动强制执行整个逻辑工作单元的回滚，Spring的这个特性可以让开发者更容易发现问题并改正。 
 
 
-## 面向接口编程
+## 1.面向接口编程
 
 这是我在阅读Head First Design Patterns时首先学习的一个旧的OOP指南。这种OOP设计原则的主要目的是减少两类之间的耦合，从而提高灵活性。
 
@@ -39,39 +38,47 @@ Spring严格遵循这一面向对象的准则，并经常公开接口以使用�
 如果您的代码依赖于缓存接口而不是任何特定的实现，则可以切换缓存提供程序而不影响代码的其他部分。
 
 下面是使用Collection框架编写Java接口的简单代码示例。如果仔细观察，在本例中，我使用了一个接口而不是实现来声明Java中的变量，参数和返回类型的方法。
-
-导入 java。util。数组 ;
-导入 java。util。列表 ;
-导入 java。util。流。收藏家 ;
-/ **
- *程序演示Java中的接口编码
- * @作者WINDOWS 8
+```
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+/**
+ * Program to demonstrate coding for interfaces in Java
+ * @author WINDOWS 8
  *
- * /
-公开 课 你好 {
-  public  static  void  main（String  args []）{
-    //使用接口作为变量类型
-    列表< String >  rawMessage  =  数组。asList（“one”，“two”，“three”）;
-    List < String >  allcaps  =  toCapitalCase（rawMessage）;
-    系统。出去。println（allcaps）;
+ */
+public class Hello {
+  public static void main(String args[]) {
+    // Using interface as variable types
+    List<String> rawMessage = Arrays.asList("one", "two", "three");
+    List<String> allcaps = toCapitalCase(rawMessage);
+    System.out.println(allcaps);
   }
-  / **
-   *使用接口作为参数类型和返回类型
-   * /
-  public  static  List < String >  toCapitalCase（List < String >  messages）{
-    返回 消息。stream（）
-                    。map（String :: toUpperCase）
-                    。收集（收藏家。toList（））;
+  /**
+   * Using Interface as type of argument and return type
+   */
+  public static List<String> toCapitalCase(List<String> messages) {
+    return messages.stream()
+                    .map(String::toUpperCase)
+                    .collect(Collectors.toList());
   }
 }
-
+```
 
 这种编码风格是灵活的，并且在未来更容易改变。
 
 
-## 怎样完成指南？
+## 2.支持在检查异常之上定义未经检查的异常
 
-像大多数 Spring [入门指南](https://spring.io/guides)一样, 你可以从头开始，完成每一步, 或者你也可以绕过你熟悉的基本步骤再开始。 不管通过哪种方式，你最后都会得到一份可执行的代码。
+如果您使用过Spring Framework，那么您已经注意到Spring支持未检查的异常而不是已检查的异常，最好的例子就是Spring JDBC。
+
+Spring具有丰富的异常层次结构来描述从数据库连接和检索数据时可能会遇到的不同错误，但它们的根源是DataAccessException，它未经检查。
+
+Spring认为，大多数错误都源于无法在catch块中纠正的原因，因此它决定为开发人员捕获异常，而不是像Java那样强制它们进入。结果是更干净的代码，没有空的catch块和更少的try-catch块。
+
+这也是在处理Java中的错误和异常时的最佳实践之一。如果您对该主题感兴趣，那么您也可以查看我的Java后期10例外最佳实践以获取更多建议。
+
+> nicerich tips：运行时异常（即未经检查的异常）发生时会自动强制执行整个逻辑工作单元的回滚，Spring的这个特性可以让开发者更容易发现问题并改正。 
 
 **如果从基础开始**，你可以往下查看[怎样使用 Gradle 构建项目](#scratch)。
 
