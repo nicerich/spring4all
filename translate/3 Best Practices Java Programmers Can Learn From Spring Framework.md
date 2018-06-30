@@ -11,7 +11,7 @@
 
 ## 导读
 
-毫无疑问，Spring Framework是最流行的Java框架之一，通过提供诸如依赖注入  和  控制反转等特性，创建真实世界的企业级Java应用程序变得非常简单  。
+毫无疑问，Spring Framework是最流行的Java框架之一，并且通过提供诸如依赖注入和控制反转等特性，使得创建真实世界的企业级Java应用程序变得非常简单。
 
 但说实话，Spring不仅仅是另一个DI和IOC框架。通过提供一个有用的抽象层，它可以进一步简化许多Java的API，例如JDBC，JMS，Java Mail等。使用Spring的JdbcTempalte和其他实用程序类使用JDBC更容易。它们消除了Java开发人员在执行SQL语句和处理ResultSets以获取他们想要的Java对象方面所面临的大部分障碍。
 
