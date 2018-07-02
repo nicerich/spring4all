@@ -1,10 +1,11 @@
-# Java程序员可以从Spring框架中学习的3个最佳实践
+# 译：Java程序员可以从Spring框架中学习的3个最佳实践
 
 > 原文：[3 Best Practices Java Programmers Can Learn From Spring Framework](https://dzone.com/articles/3-best-practices-java-programmers-can-learn-from-s)
 >
-> 译者： [nicerich](https://github.com/nicerich)
+> 作者： [Javin Paul](https://dzone.com/users/854335/javinpaul.html)
 >
-> 校对： 
+> 译者： [nicerich](https://github.com/nicerich)
+
 
 
 看一看Spring的源代码，你便可以看到设计spring框架的构思。我们从Spring中寻找到一些最佳实践可供Java开发人员学习。
