@@ -27,7 +27,7 @@
 
 ## 1.面向接口编程
 
-这是我在阅读Head First Design Patterns时首先学习的一个旧的OOP指南。这种OOP设计原则的主要目的是减少两类之间的耦合，从而提高灵活性。
+这是我在阅读《Head First Design Patterns》时首先学习的一个旧的OOP指南。这种OOP设计原则的主要目的是减少两类之间的耦合，从而提高灵活性。
 
 Spring严格遵循这一面向对象的准则，并经常公开接口以使用关键类，例如，创建JdbcOperation接口以利用JdbcTemplate。这种做法促进了不同层之间的松散耦合。
 
