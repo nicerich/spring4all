@@ -13,9 +13,9 @@
 
 毫无疑问，Spring Framework是最流行的Java框架之一，并且通过提供诸如依赖注入和控制反转等特性，使得创建真实的企业级Java应用程序变得非常简单。
 
-但说实话，Spring不仅仅是一个DI和IOC框架。通过提供一个有用的抽象层，它可以进一步简化许多Java的API，例如JDBC，JMS，Java Mail等。使用Spring的JdbcTempalte和其他实用程序类使用JDBC更容易。它们消除了Java开发人员在执行SQL语句和处理ResultSets以获取他们想要的Java对象方面所面临的大部分障碍。
+但说实话，Spring不仅仅是一个DI和IOC框架。通过提供一个有用的抽象层，它可以进一步简化许多Java的API，例如JDBC，JMS，Java Mail等。用了Spring的JdbcTempalte和其他实用程序类会让JDBC的开发工作变得非常简单。它们消除了Java开发人员在执行SQL语句和处理ResultSets以获取他们想要的Java对象方面所面临的大部分障碍。
 
-所以，当你学习Spring的时候，你不仅学会了如何使用它，还学习了一些关于如何用Java编写更好的代码和一般的面向对象编程的有用见解。
+所以，当你学习Spring的时候，你不仅学会了如何使用它，还学习了一些关于如何用Java编写更好的代码和一般的面向对象编程的有用见解。1
 
 在本文中，我将分享我在学习Spring时遇到的一些最佳实践，主要是阅读Craig Walls 的经典Spring in Action书以及我对Spring的经验。
 
