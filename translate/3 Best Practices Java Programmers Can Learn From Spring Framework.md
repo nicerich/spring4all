@@ -86,7 +86,7 @@ Spring大量使用模板方法设计模式来简化事情。一个很好的例�
 
 例如，在处理JDBC时，可以使用JdbcTemplate执行查询并获取所需的对象。您只需提供SQL，这在每种情况下（的实现）都是不同的，一样需要映射逻辑以将表中的行数据和对象一一对应起来。
 
-这是一个很好的图表，很好地解释了模板模式。你可以看到每个人都有一些共同的任务，但是他们做了不同的工作，并且很好地被Template方法捕获。他们所需要做的就是定义他们的工作，通过定义work（）抽象方法。
+这是一个很好的图表，很好地解释了模板模式。你可以看到每个人都有一些共同的任务，但是他们做了不同的工作，并且很好地被Template方法捕获。他们所需要做的就是定义他们的工作，通过自定义实现work（）的抽象方法。
 
 ![image](https://github.com/nicerich/spring4all/blob/master/translate/images/Template%20method%20pattern%20in%20Java%20example.png?raw=true)
 
