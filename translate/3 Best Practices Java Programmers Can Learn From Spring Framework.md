@@ -1,10 +1,10 @@
-# 译：Java程序员可以从Spring框架中学习的3个最佳实践
+# Java程序员可以从Spring框架中学习的3个最佳实践
 
-> 原文：[3 Best Practices Java Programmers Can Learn From Spring Framework](https://dzone.com/articles/3-best-practices-java-programmers-can-learn-from-s)
+>原文链接：[3 Best Practices Java Programmers Can Learn From Spring Framework](https://dzone.com/articles/3-best-practices-java-programmers-can-learn-from-s)
 >
-> 作者： [Javin Paul](https://dzone.com/users/854335/javinpaul.html)
+>作者： [Javin Paul](https://dzone.com/users/854335/javinpaul.html)
 >
-> 译者： [nicerich](https://github.com/nicerich)
+>译者： [nicerich](https://github.com/nicerich)
 
 
 
@@ -67,17 +67,27 @@ public class Hello {
 这种编码风格是灵活的，并且在未来更容易改变。
 
 
-## 2.支持在检查异常之上定义未经检查的异常
+## 2.偏爱定义Unchecked Exceptions（相比于Checked Excepitons）
 
-如果您使用过Spring Framework，那么您已经注意到Spring支持在已检查的异常之上定义未经检查的异常，最好的例子就是Spring JDBC。
+如果您使用过Spring Framework，那么您已经注意到Spring支持在Checked Exceptions之上定义Unchecked Exceptions，最好的例子就是Spring JDBC。
 
-Spring具有丰富的异常层次结构来描述从数据库连接和检索数据时可能会遇到的不同错误，但它们的根源是DataAccessException，而它是未经检查的。
+Spring具有丰富的异常层次结构来描述从数据库连接和检索数据时可能会遇到的不同错误，但它们的根源是DataAccessException，而它是未经检查的（Unchecked Exceptions）。
 
 Spring认为大多数错误都源于无法在catch块中纠正的原因，因此它决定让开发人员捕获该异常，而不是像Java那样强制进入它。结果是更干净的代码，没有空的catch块和更少的try-catch块。
 
 这也是在处理Java中的错误和异常时的最佳实践之一。如果您对该主题感兴趣，那么您也可以查看我的《10 Java Exception best practice》以获取更多建议。
 
-> 译者提醒：此段翻译比较拗口，自认为翻译不达标。基于理解进行说明，运行时异常（即未经检查的异常）发生时会自动强制执行整个逻辑工作单元的回滚，Spring的这个特性可以让开发者自定义特定异常并在合适的位置抛出，从而更容易地发现并改正问题。 
+> 译者补充：对比DataAccessException，下方代码的FileNotFoundException是Checked Excepitons，出现时只能try/catch捕获或向上抛出，为了避免这样的麻烦所以“偏爱”Unchecked Exceptions。
+```
+File file = new File("aaaa");
+try {
+	FileInputStream fis = new FileInputStream(file);
+} catch (FileNotFoundException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+```
+> 译者提醒：那么Unchecked Exceptions 的好处是什么呢？运行时异常（即未经检查的异常 Unchecked Exceptions ）发生时会自动强制执行整个逻辑工作单元的回滚，Spring的这个特性可以让开发者自定义特定异常并在合适的位置抛出，从而更容易地发现并改正问题。 （另Unchecked Exceptions 和 Checked Exceptions 作为研究对象在译文中不做翻译） 
 
 ## 3.使用模板设计模式
 
@@ -102,3 +112,14 @@ Spring大量使用模板方法设计模式来简化事情。一个很好的例�
 
 
 
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
