@@ -29,7 +29,7 @@
 
 这是我在阅读《Head First Design Patterns》时首先学习的一个旧的OOP指南。这种OOP设计原则的主要目的是减少两类之间的耦合，从而提高灵活性。
 
-Spring严格遵循这一面向对象的准则，并经常公开接口给关键类，例如，特意创建JdbcOperation接口以实现JdbcTemplate的（译者：查看源码 public class JdbcTemplate extends JdbcAccessor implements JdbcOperations）。这种做法促进了不同层之间的松散耦合。
+Spring严格遵循这一面向对象的准则，并经常公开接口给关键类，例如，特意创建JdbcOperation接口用以实现JdbcTemplate（译者：查看源码 public class JdbcTemplate extends JdbcAccessor implements JdbcOperations）。这种做法促进了不同层之间的松散耦合。
 
 另一个很好的例子是一个Cache接口，它被用来提供缓存。所有其他缓存实现（例如EhCache，ConcurrentMapCache和NoOpCache）都实现此接口。
 
