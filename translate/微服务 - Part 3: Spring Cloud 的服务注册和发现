@@ -1,16 +1,18 @@
 # 微服务 - Part 3: Spring Cloud 的服务注册和发现
 
-原文链接：[3 Best Practices Java Programmers Can Learn From Spring Framework](https://dzone.com/articles/3-best-practices-java-programmers-can-learn-from-s)
+原文链接：[Microservices - Part 3: Spring Cloud Service Registry and Discovery](https://dzone.com/articles/microservices-part-3-spring-cloud-service-registry)
 
-作者： [Javin Paul](https://dzone.com/users/854335/javinpaul.html)
+作者： [Siva Prasad Reddy Katamreddy](https://dzone.com/users/230813/sivaprasad.html)
 
 译者： [nicerich](https://github.com/nicerich)
 
 
 
-看一看Spring的源代码，你便可以看到设计spring框架的构思。我们从Spring中寻找到一些最佳实践可供Java开发人员学习。
+了解服务注册和发现的有关设置或使用Spring Cloud和Spring Boot进行微服务开发的信息。
 
 ## 导读
+
+在微服务领域，Service Registry和Discovery发挥着重要作用，因为我们很可能运行多个服务实例，我们需要一种机制来调用其他服务，而无需对其主机名或端口号进行硬编码。除此之外，在云环境中，服务实例可能会随时出现并停止运行。所以我们需要一些自动服务注册和发现机制。与往常一样，Spring Cloud提供多种选项的Service Registry和Discovery功能。我们可以使用Netflix Eureka或Consul进行Service Registry and Discovery。在这篇文章中，我们将学习如何使用SpringCloud Netflix Eureka进行Service Registry和Discovery。
 
 毫无疑问，Spring Framework是最流行的Java框架之一，并且通过提供诸如依赖注入和控制反转等特性，使得创建真实的企业级Java应用程序变得非常简单。
 
